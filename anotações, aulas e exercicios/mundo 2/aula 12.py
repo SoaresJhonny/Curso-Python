@@ -18,7 +18,6 @@ else:
 
 
 
-
 # exercicio 37 - Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão: 1 para binário, 2 para octal e 3 para hexadecimal.
 
 print('CONVERSOR DE BASE NUMÉRICA')
@@ -79,6 +78,7 @@ resultadofinal = ''.join(map(str, registro)) #transforma os itens da lista em st
 print('o número {} em {} é {}.'.format(numerousuario, base_nome, resultadofinal))
 
 
+
 # exercicio 38 - Escreva um programa que leia dois números inteiros e comnpare-os, mostrando na tela uma mensagem: "O primeiro valor é maior", "O segundo valor é maior", "Não existe valor maior, os dois são iguais".
 
 n1 = float(input('Digite um número: '))
@@ -121,7 +121,6 @@ elif media >= 5.0 and media < 6.9:
     print('RECUPERAÇÃO')
 elif media == 7.0 or media > 7.0:
     print('APROVADO')
-
 
 
 
@@ -315,8 +314,6 @@ else:
 import random
 from time import sleep
 
-
-
 pedra = 1
 papel = 2
 tesoura = 3
@@ -344,7 +341,6 @@ while True:
         sleep(1.5)
 
 
-
     print('Vamos lá!')
     sleep(1.5)
     print()
@@ -355,8 +351,6 @@ while True:
     sleep(1)
     print('\033[0;36;40mPÔ!\033[m')
     print()
-
-
 
 
     if escolhapc == 1:
@@ -376,7 +370,6 @@ while True:
         print('Você: \033[1;35;40mTesoura\033[m')
     print()
     sleep(1.5)
-
 
 
     #derrotas
