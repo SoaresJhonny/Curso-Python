@@ -1,3 +1,4 @@
+'''
 # Biblioteca matemática
 
 import math
@@ -24,7 +25,7 @@ pi = trunc(n)
 print('A parte inteira do número {} é {}!'.format(n, pi))
 
 
-'''outra forma:'''
+# outra forma:
 
 n2 = float(input('Digite um número para visualizar sua porção inteira: '))
 print('A parte inteira do número {} é {}!'.format(n, int))
@@ -52,7 +53,7 @@ raiz = math.sqrt(soma_dos_catetos)
 print('A hipotenusa de um triângulo-retangulo com essas medidas é: ', raiz)
 
 
-'''outra forma:'''
+#outra forma:
 
 from math import hypot
 co2 = float(input('Digite o comprimento do cateto oposto do triângulo-retangulo: '))
@@ -92,7 +93,7 @@ aluno_sorteado = vetor[indice_sorteado]
 print('O aluno(a) {} foi sorteado para apagar o quadro!'.format(aluno_sorteado))
 
 
-'''outra forma:'''
+#outra forma:
 
 from random import choice
 
@@ -108,3 +109,34 @@ print('O aluno(a) que deverá apagar a lousa é: {}'.format(sorteado))
 
 
 
+# exercicio 20 - O professor do desafio anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
+
+
+import random
+
+aluno1 = str(input('Digite o nome do primeiro aluno: '))
+aluno2 = str(input('Digite o nome do segundo aluno: '))
+aluno3 = str(input('Digite o nome do terceiro aluno: ')) 
+aluno4 = str(input('Digite o nome do quarto aluno: '))
+lista = [aluno1, aluno2, aluno3, aluno4]
+
+random.shuffle(lista)
+
+print('A ordem de apresentação será ')
+print(lista)
+
+
+# exercicio 21 - Faça um programa que aba e reproduza o áudio de um arquivo MP3.
+
+import pygame
+
+pygame.init()
+pygame.mixer.init()
+
+pygame.mixer.music.load('waitaminute.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+
+while pygame.mixer.music.get_busy():
+    pygame.time.Clock().tick(10)
+'''
