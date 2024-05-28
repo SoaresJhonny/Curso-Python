@@ -15,9 +15,11 @@ if prestacaomensal > notexceder:
 else:
     print('O empréstimo foi realizado com \033[1;32;40mSUCESSO!\033[m')
     print('VALOR DA PRESTAÇÃO: R${:.2f}'.format(prestacaomensal).replace('.', ','))
+'''
 
 
 
+'''
 # exercicio 37 - Escreva um programa que leia um número inteiro qualquer e peça para o usuário escolher qual será a base de conversão: 1 para binário, 2 para octal e 3 para hexadecimal.
 
 print('CONVERSOR DE BASE NUMÉRICA')
@@ -76,9 +78,11 @@ if base == 3:
 registro.reverse() #inverte a ordem dos resultados para que seja exibido o resultado correto na tela
 resultadofinal = ''.join(map(str, registro)) #transforma os itens da lista em strings
 print('o número {} em {} é {}.'.format(numerousuario, base_nome, resultadofinal))
+'''
 
 
 
+'''
 # exercicio 38 - Escreva um programa que leia dois números inteiros e comnpare-os, mostrando na tela uma mensagem: "O primeiro valor é maior", "O segundo valor é maior", "Não existe valor maior, os dois são iguais".
 
 n1 = float(input('Digite um número: '))
@@ -88,26 +92,40 @@ if n1 > n2:
     print('O primeiro valor é maior.')
 elif n2 > n1:
     print('O segundo valor é maior: ')
-elif n1 == n2:
+else n1 == n2:
     print('Não existe valor maior, os dois são iguais.')
+'''
 
 
 
+'''
 # exercicios 39 - Faça um programa que leia o ano de nascimento de um jovem e informe, de acordo com sua idade: -Se ele ainda terá que se alistar no serviço militar. -Se está na hora de se alistar. -Se ja passou do tempo do alistamento. O programa também deverá mostrar quanto tempo falta ou quanto tempo passou do prazo.
 
 from datetime import date
 print('Bem-vindo ao suporte de verificação de alistamento!')
 
-ano = date.today().year
+atual = date.today().year
+nasc = int(input('Ano de nascimento: '))
+idade = atual - nasc
 
-idade = int(input('Digite o ano em que você nasceu: '))
-print('Você tem {} anos.')
+print('Você tem {} anos'.format(idade))
 
-if idade < 18:
-    print 
+if idade == 18:
+    print('Você tem que se alistar IMEDIATAMENTE!')
+elif idade < 18:
+    saldo = 18 - idade
+    print('Ainda falta {} para o seu alistamento.'.format(saldo))
+    ano = atual + saldo
+    print('Seu alistamento será em {}.'.format(ano))
+elif idade > 18:
+    saldo = idade - 18
+    ano = atual - saldo
+    print('Você já deveria ter se alistado há {} anos'.format(saldo))
+'''
 
 
 
+'''
 # exercicio 40 - Crie um programa que leia duas notas de um aluno e calcule sua média, mostrando uma mensagem no final, de acordo coma média atingida: -média abaixo de 5.0: REPROVADO.  -média entre 5.0 e 6.9: RECUPERAÇÃO.  -média 7.0 ou superior: APROVADO.
 
 nota1 = float(input('Digite a primeira nota do aluno: '))
@@ -121,45 +139,48 @@ elif media >= 5.0 and media < 6.9:
     print('RECUPERAÇÃO')
 elif media == 7.0 or media > 7.0:
     print('APROVADO')
+'''
 
 
 
-# exercicio 41 - A Confederação Nacional de Natação precisa de um programa que leia o ano de nascimento de um atetla e mostre sua categoria, de acordo com a idade:
-
--Até 9 anos: MIRIM
--Até 14 anos: INFANTIL
--Até 19 anos: JUNIOR
--Até 24 anos: SÊNIOR
--Acima: MASTER
+'''
+# exercicio 41 - A Confederação Nacional de Natação precisa de um programa que leia o atual de nascimento de um atetla e mostre sua categoria, de acordo com a idade:
+#Até 9 anos: MIRIM
+#Até 14 anos: INFANTIL
+#Até 19 anos: JUNIOR
+#Até 24 anos: SÊNIOR
+#Acima: MASTER
 
 
 from datetime import date
 
-ano = date.today().year
+atual = date.today().year
 
 nascimento = int(input('Digite o ano de nascimento do atleta para ver sua categoria: '))
 
-categoria = ano - nascimento
+categoria = atual - nascimento
 print('O atleta tem entre {} e {} anos'.format(categoria - 1, categoria))
 
 if categoria <= 9:
     print('CATEGORIA: MIRIM')
-elif categoria > 9 and categoria <= 14:
+elif categoria <= 14:
     print('CATEGORIA: INFANTIL')
-elif categoria > 14 and categoria <= 19:
+elif categoria <= 19:
     print('CATEGORIA: JUNIOR')
-elif categoria > 19 and categoria <= 24:
+elif categoria <= 24:
     print('CATEGORIA: SÊNIOR')
-elif categoria > 24:
+else:
     print('CATEGORIA: MASTER')
+'''
 
 
 
+'''
 # exercicio 42 - Refaça o desafio 35 dos triângulos, acrescentando o recurso de mostrar que tipo de triângulo será formado:
 
-Equilátero: todos os lados iguais
-isóceles: dois lados iguais
-escaleno: todos os lados diferente
+#Equilátero: todos os lados iguais
+#isóceles: dois lados iguais
+#escaleno: todos os lados diferente
 
 
 r1 = int(input('Digite o tamanho da primeira reta: '))
@@ -167,9 +188,7 @@ r2 = int(input('Digite o tamanho da segunda reta: '))
 r3 = int(input('Digite o tamanho da terceira reta: '))
 
 if r1 + r2 > r3:
-
     print('Sim, com retas desses tamanhos é possível formar um triângulo!')
-
     if r1 == r2 == r3:
         print('O triângulo será Equilátero.')
     elif r1 == r2 or r1 == r3 or r2 == r3:
@@ -179,9 +198,11 @@ if r1 + r2 > r3:
 
 else:
     print('Não, com retas desses tamanhos não é possível formar um triângulo!')
+'''
 
 
 
+'''
 # exercicio 43 - Desenvolva uma lógica que leia o peso e a altura de uma pessoa, calcule seu IMC e msotre seu status, de acordo com a tabela abaixo:
 
 "- Abaixo de 18.5: Abaixo do peso"
@@ -227,12 +248,14 @@ elif imc >= 30 and imc < 40:
 
 elif imc > 40:
     print('Seu IMC é de \033[4;33;40m{:.2f}\033[m, portanto você está com \033[1;32;40mobesidade mórbida\033[m. \033[4;31;40mProcure ajuda profissional o quanto antes!\033[m'.format(imc, ))
+'''
 
 
 
+'''
 #exercicio 44 - Elabore um programa que calcule o valor a ser pago por um produto, considerando o seu preço normal e condição de pagamento:
 "à vista em dinheiro: 10%"
-"à vista eno cartão: 5%"
+"à vista e no cartão: 5%"
 "em até 2x no cartão: preço normal"
 "3x ou mais no cartão: 20% de juros"
 
@@ -269,8 +292,6 @@ while final != 1 and final != 2:
         elif parcelas > 2:
             print('Parcelando o produto em mais de 2x, você terá juros de 20%. O produto sairá por \033[0;32;40mR${:.2f}\033[m'.format(juros).replace('.', ','))
     
-
-
     print()
     print('Deseja finalizar sua compra?')
 
@@ -279,8 +300,6 @@ while final != 1 and final != 2:
 
     print()
     final = int(input('Finalizar, cancelar ou trocar forma de pagamento?: '))
-
-
 
 print()
 # Verificar a senha apenas se a opção de pagamento for 3
@@ -306,9 +325,11 @@ elif final == 3:
 else:
     print('\033[0;31;40mNão temos essa opção, tente novamente!\033[m')
     sleep(2)
+'''
 
 
 
+'''
 # exercicio 45 - Faça um programa que faça o computador jogar Jokenpô com você.
 
 import random
