@@ -12,10 +12,11 @@ print('A raiz de {} é igual a {}'.format(num, math.ceil(raiz)))
 import random
 num = random.randint(1,100)
 print(num)
+'''
 
 
 
-
+'''
 # exercicio 16 - Crie um programa que leia um número real qualquer pelo teclado e mostre na tela e sua porção inteira.
 
 from math import trunc
@@ -23,16 +24,17 @@ n = float(input('Digite um número para visualizar sua porção inteira: '))
 
 pi = trunc(n)
 print('A parte inteira do número {} é {}!'.format(n, pi))
-
+'''
 
 # outra forma:
 
-n2 = float(input('Digite um número para visualizar sua porção inteira: '))
-print('A parte inteira do número {} é {}!'.format(n, int))
+'''n2 = float(input('Digite um número para visualizar sua porção inteira: '))
+print('A parte inteira do número {} é {}!'.format(n, int))'''
 
 
 
 
+'''
 # exercicio 17 - Faça um programa que leia o comprimento do cateto oposto e do cateto adjacente de um triângulo, calcule e mostre o comprimento da hipotenusa.
 
 import math
@@ -51,8 +53,9 @@ soma_dos_catetos = calculo_co + calculo_ca
 
 raiz = math.sqrt(soma_dos_catetos)
 print('A hipotenusa de um triângulo-retangulo com essas medidas é: ', raiz)
+'''
 
-
+'''
 #outra forma:
 
 from math import hypot
@@ -60,10 +63,11 @@ co2 = float(input('Digite o comprimento do cateto oposto do triângulo-retangulo
 ca2 = float(input('Agora digite o cateto adjacente do triângulo-retangulo: '))
 hi = hypot(co2, ca2)
 print('A hipotenusa de um triângulo-retangulo com essas medidas é: {:.2f}'.format(hi))
+'''
 
 
 
-
+'''
 #exercicio - 18 Faça um programa que leia um ângulo qualquer e mostra na tela o valor do seno, cosseno e tangente desse ângulo.
 
 import math
@@ -73,9 +77,11 @@ cosseno = math.cos(math.radians(angulo))
 tangente = math.tan(math.radians(angulo))
 
 print('O valor de seno é {:.2f}, o valor de cosseno é {:.2f} e a tangente é {:.2f}'.format(seno, cosseno, tangente))
+'''
 
 
 
+'''
 # exercicio 19 - Um professor quer sortear um dos seus quatro alunos para apagar o quadro. Faça um programa que ajude ele, lendo o nome deles e escrevendo o nome do escolhido.
 
 import random
@@ -106,9 +112,11 @@ lista = [aluno1, aluno2, aluno3, aluno4]
 
 sorteado = choice(lista)
 print('O aluno(a) que deverá apagar a lousa é: {}'.format(sorteado))
+'''
 
 
 
+'''
 # exercicio 20 - O professor do desafio anterior quer sortear a ordem de apresentação de trabalhos dos alunos. Faça um programa que leia o nome dos quatro alunos e mostre a ordem sorteada.
 
 
@@ -124,8 +132,11 @@ random.shuffle(lista)
 
 print('A ordem de apresentação será ')
 print(lista)
+'''
 
 
+
+'''
 # exercicio 21 - Faça um programa que aba e reproduza o áudio de um arquivo MP3.
 
 import pygame
