@@ -15,6 +15,7 @@ print('\U0001F386 \U0001F386 \U0001F386 \U0001F386')
 '''
 
 
+
 '''
 #exercicio 47 - Crie um programa que mostre na tela todos os números pares de 1 a 50 que estão no intervalo entre 1 e 50.
 
@@ -115,7 +116,7 @@ else:
 
 
 '''
-#exercicio 53 - Crie um programa que leia uma frase qualuqer e diga se ela é um palíndromo, desconsiderando os espaços.
+#exercicio 53 - Crie um programa que leia uma frase qualquer e diga se ela é um palíndromo, desconsiderando os espaços.
 
 # exemplo: apos a sopa
 
