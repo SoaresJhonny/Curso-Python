@@ -197,7 +197,7 @@ print('FIM')
 
 
 '''
-#exercicio 63 - Escreva um programa que leia um número n inteiro qualuqer e mostre na tela os n primeiros elementos de um Sequência de Fibonnaci.
+#exercicio 63 - Escreva um programa que leia um número n inteiro qualquer e mostre na tela os n primeiros elementos de um Sequência de Fibonnaci.
 
 #Ex 0 - 1 - 1 - 2 - 3 - 5 - 8
 
