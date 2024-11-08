@@ -1,0 +1,6 @@
+Modularização:
+
+-Dividir um programa grande
+-Aumentar a legibilidade
+-Facilitar a manutenção
+

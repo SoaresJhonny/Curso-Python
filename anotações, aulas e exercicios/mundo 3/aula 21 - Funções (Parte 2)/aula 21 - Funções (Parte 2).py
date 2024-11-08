@@ -48,34 +48,35 @@ print(voto(ano_nascimento))
 
 
 
-'''
 # exercicio 102 - Crie um programa que tenha uma função fatorial() que receba dois parâmetros: o primeiro que indique o número a calcular e outro chamado show, que será um valor lógico (opcional) indicando se será mostrado ou não na tela o processo de cálculo do fatorial.
 
 def fatorial(num, show=False):
     """
     -> Calcula o fatorial do número digitado.
-    :param n: O número a ser calculado.
+    :param num: O número a ser calculado.
     :param show: (opcional) mostrar ou não a conta.
     :return: Retorna o valor de n.
     """
+    multiplicador = 1
     if show == True:
-        multiplicador = 1
-        print('-'*20)
         for numero in range(num, 0, -1):
-            multiplicador = multiplicador*numero
             print(numero, end='')
-            print(' x ' if numero > 1 else ' = ', end='')
+            if numero > 1:
+                print(' x ', end='')
+            else:
+                print(' = ', end='')
+            multiplicador *= numero
         return multiplicador
     if show == False:
         multiplicador = 1
         print('-'*20)
         for numero in range(num, 0, -1):
-            multiplicador = multiplicador*numero
+            multiplicador *= numero
         return multiplicador
 
 
-print(fatorial(25, True))
-'''
+print(fatorial(5, True))
+
 
 
 '''
