@@ -1,0 +1,70 @@
+# modos de manipular texto:
+
+ex:
+nomedavariavel = print('Cachorros gostam muito de comer ração')
+
+
+------FATIAMENTO------
+
+nomedavariavel[5] - pega o caracter de número 5 = r
+
+nomedavariavel[5:10] - pega os caracteres do número 5 ao 10 = rros g
+
+nomedavariavel[5:10:2] - pega os caracteres do número 5 ao 10 pulando de 2 em 2 = ro g
+
+nomedavariavel[:10] - pega os caracteres do 0 ao 10 = Cachorros g
+
+nomedavariavel[10:] - pega os caracteres do 10 até o último = gostam muito de comer ração
+
+len(nomedavariavel) - conta a quantidade de caracteres (inclusive espaços) = 36
+
+nomedavariavel.count('a') - conta a quantidade de caracteres 'a' dentro da string (diferencia maíusculos de minúsculos) = 3
+
+nomedavariavel.count('a', 0, 13) - conta a quantidade de caracteres 'a' do ínicio da string ao caracter 13 = 1
+
+nomedavariavel.find('ção') - conta quantas vezes foi encontrado o grupo de caracteres 'ção' dentro da string (caso não seja encontrado, irá retornar -1) = 1
+
+'gostam' in nomedavarialvel - analisa se existe o grupo de caracteres na string, caso tenha, retorna true, caso contrário, false = true
+
+
+
+
+------TRANSFORMAÇÃO------
+
+nomedavariavel.replace('Cachorros', Gatos') - Troca a primeira palavra pela segunda palavra = Gatos gostam muito de comer ração
+
+nomedavariavel.upper() - transforma todas as letras em maiúsculo = CACHORROS GOSTAM MUITO DE COMER RAÇÃO
+
+nomedavariavel.lower() - transforma todas as letras em minúsculo = cachorros gostam muito de comer ração
+
+nomedavariavel.capitalize() - transforma apenas a primeira letra da string para maiúsculo = Cachorros gostam muito de comer ração
+
+nomedavariavel.title() - Transforma a primeira letra de cada palavra em maiúsculo = Cachorros Gostam Muito De Comer Ração 
+
+nomedavariavel.strip() - remove os espaços antes e depois das letras da string
+ex:
+antes - '   Cachorros gostam muito de comer ração  '
+depois - 'Cachorros gostam muito de comer ração'
+
+nomedavariavel.lstrip() - remove os espaços da esquerda da string
+
+nomedavariavel.rstrip() - remove os espaços da direita da string
+
+
+
+
+
+------DIVISÃO------
+
+nomedavariavel.split() - faz uma divisão no local de cada espaço da string, após cada espaço a contagem de cada caracter é resetada, e cada palavra separada é colocada em uma lista numerada
+ex:
+
+antes do split - 'que beleza'
+                  0123456789
+
+depois do split - '|que| |beleza|'
+                    012   012345
+                   | 1 | |   2  |  (numero de cada item da lista, que: item 1
+                                                                  beleza: item 2)
+
+'-'.join(nomedavariavel) - junta todos os itens pelo caracter colocado entre aspas simples = que-beleza

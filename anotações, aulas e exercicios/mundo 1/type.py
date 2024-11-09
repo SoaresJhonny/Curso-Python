@@ -1,8 +1,0 @@
-a = input("Digite qualuqer coisa: ")
-print('O tipo desse valor é', type(a))
-print('Só tem espaços? ', a.isspace())
-print('É númerico? ', a.isnumeric())
-print('Tem só letras? ', a.isalpha())
-print('É maíusculo? ', a.isupper())
-print('É alfanumérico? (Possui letras e números)', a.isalnum())
-print('Está capitalizada?', a.istitle())

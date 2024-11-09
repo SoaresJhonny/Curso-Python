@@ -1,0 +1,78 @@
+Para declarar um Dicionário: 
+
+ex:
+dados = dict()
+ou
+dados = {'nome': 'José', 'idade': '45', 'sexo': 'Masculino'}
+
+-----------------------------
+
+Para adicionar mais um elemento:
+
+dados['estado'] = 'São Paulo'
+
+-----------------------------
+
+Para excluir um item:
+
+del dados['sexo']
+
+-----------------------------
+
+Para alterar o valor de um item:
+
+dados['nome'] = 'Pedro'
+
+-----------------------------
+
+Estrutura de um dicionário:
+
+.values() - retorna todos os valores adicionados na lista. Ex: José, 45, Masculino, São Paulo
+
+.keys() - retorna os nomes dos índices. Ex: nome, idade, sexo, estado
+
+.items() - retorna keys e values. 
+
+
+#Ex código:
+
+pessoa = {'nome': 'Jhonny', 'idade': '18', 'sexo': 'masculino'}
+
+print(f'O {pessoa["nome"]} tem {pessoa["idade"]} anos e é do sexo {pessoa["sexo"]}.')
+print()
+print(pessoa.keys())
+print()
+print(pessoa.values())
+print()
+print(pessoa.items())
+'''
+
+
+#Dicionário dentro de uma lista:
+
+brasil = []
+estado1 = {'uf': 'Rio de Janeiro', 'sigla': 'RJ'}
+estado2 = {'uf': 'São Paulo', 'sigla': 'SP'}
+brasil.append(estado1)
+brasil.append(estado2)
+
+print(brasil[1]['sigla'])
+
+
+
+#Ex código um pouco mais complexo:
+
+estado = {}
+brasil = []
+
+for c in range(1, 4):
+    estado['uf'] = str(input(f'Digite o {c}º estado: '))
+    estado['sigla'] = str(input('Sigla do estado: '))
+    brasil.append(estado.copy())
+    c += 1
+    print()
+
+for e in brasil:
+    for k, v in e.items():
+        print(f'O campo {k} tem valor {v}.')
+    print()
